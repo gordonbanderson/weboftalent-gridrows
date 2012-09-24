@@ -14,6 +14,7 @@ class GridRowsExtension extends Extension {
 
   */
   public function SplitSetIntoGridRows($itemsAndNumberOfCols) {
+    error_log("SSIGR T1");
     $splits = explode('|',$itemsAndNumberOfCols);
     $itemsMethods = $splits[0];
     $numberOfCols = (int)$splits[1];
@@ -23,14 +24,20 @@ class GridRowsExtension extends Extension {
     $result = new DataObjectSet();
     foreach ($itemsInGrid as $key => $item) {
       $columns->push($item);
-      $position = $position + 1;
-      if ($position > $numberOfCols) {
+      error_log("Comparing position $position > number of cols $numberOfCols");
+      if (($position) >= $numberOfCols) {
+        error_log("NEW ROW");
         $position = 1;
         $row = new DataObjectSet();
         $row->Columns = $columns;
         $result->push($row);
         $columns = new DataObjectSet();
+      } else {
+        $position = $position + 1;
       }
+
+
+
     }
 
     if ($columns->Count() > 0) {
