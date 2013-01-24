@@ -4,7 +4,7 @@
 # Installation
     git clone git://github.com/gordonbanderson/weboftalent-gridrows.git
     cd weboftalent-gridrows
-    git checkout stable24
+    git checkout stable30
 
 The name of the output directory does not matter
 
@@ -18,16 +18,16 @@ An example template is shown below.
 ```
 <h1>$Title</h1>
 $Content
-<% control SplitSetIntoGridRows(AllChildren|3) %>
+<% loop SplitSetIntoGridRows('AllChildren',3) %>
 <div class="row">
-<% control Columns %>
+<% loop Columns %>
 <div class="span3"><h4><a href="$Link">$Title
 <a href="$Link"><% control Screenshot.SetWidth(300) %><img src="$URL" alt="$Title"/><% end_control %></a>
 </h4>
 </div><!-- end of span 4 -->
-<% end_control %>
+<% end_loop %>
 </div><!-- end of row -->
-<% end_control %>
+<% end_loop %>
 ```
 
 
