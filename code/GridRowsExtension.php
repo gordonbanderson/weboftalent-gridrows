@@ -1,6 +1,6 @@
 <?php
 
-class GridRowsExtension extends Extension {
+class GridRowsExtension extends DataExtension {
 
   /*
   If you are laying out using some form of grid, e.g. HTML table (ugh) or bootstraps span classes it is useful
@@ -13,35 +13,29 @@ class GridRowsExtension extends Extension {
   <% end_control %>
 
   */
-  public function SplitSetIntoGridRows($itemsAndNumberOfCols) {
-    error_log("SSIGR T1");
-    $splits = explode('|',$itemsAndNumberOfCols);
-    $itemsMethods = $splits[0];
-    $numberOfCols = (int)$splits[1];
-    $itemsInGrid = $this->owner->$itemsMethods();
+  public function SplitSetIntoGridRows($itemsInGridMethod,$numberOfCols) {
+    error_log("GRID ROWS");
+    $itemsInGrid = $this->owner->$itemsInGridMethod();
     $position = 1;
-    $columns = new DataObjectSet();
-    $result = new DataObjectSet();
+    $columns = new ArrayList();
+    $result = new ArrayList();
     foreach ($itemsInGrid as $key => $item) {
       $columns->push($item);
       error_log("Comparing position $position > number of cols $numberOfCols");
       if (($position) >= $numberOfCols) {
         error_log("NEW ROW");
         $position = 1;
-        $row = new DataObjectSet();
+        $row = new ArrayList();
         $row->Columns = $columns;
         $result->push($row);
-        $columns = new DataObjectSet();
+        $columns = new ArrayList();
       } else {
         $position = $position + 1;
       }
-
-
-
     }
 
     if ($columns->Count() > 0) {
-      $row = new DataObjectSet();
+      $row = new ArrayList();
       $row->Columns = $columns;
       $result->push($row);
     }
