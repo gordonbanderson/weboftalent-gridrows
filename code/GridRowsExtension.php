@@ -13,17 +13,14 @@ class GridRowsExtension extends DataExtension {
   <% end_control %>
 
   */
-  public function SplitSetIntoGridRows($itemsInGridMethod,$numberOfCols) {
-    error_log("GRID ROWS");
+  public function SplitDataListIntoGridRows($itemsInGridMethod,$numberOfCols) {
     $itemsInGrid = $this->owner->$itemsInGridMethod();
     $position = 1;
     $columns = new ArrayList();
     $result = new ArrayList();
     foreach ($itemsInGrid as $key => $item) {
       $columns->push($item);
-      error_log("Comparing position $position > number of cols $numberOfCols");
       if (($position) >= $numberOfCols) {
-        error_log("NEW ROW");
         $position = 1;
         $row = new ArrayList();
         $row->Columns = $columns;
@@ -40,14 +37,9 @@ class GridRowsExtension extends DataExtension {
       $result->push($row);
     }
 
-    // FIXME add padding?
-
     return $result;
-    //$result = new DataObjectSet();
-
   }
 
 
 
 }
-?>
