@@ -1,5 +1,16 @@
 # Change Log
 
+## [Unreleased](https://github.com/gordonbanderson/weboftalent-gridrows/tree/HEAD)
+
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/1.0.1...HEAD)
+
+**Closed issues:**
+
+- Convert to PSR2 [\#2](https://github.com/gordonbanderson/weboftalent-gridrows/issues/2)
+
+## [1.0.1](https://github.com/gordonbanderson/weboftalent-gridrows/tree/1.0.1) (2016-01-19)
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/1.0.0...1.0.1)
+
 ## [1.0.0](https://github.com/gordonbanderson/weboftalent-gridrows/tree/1.0.0) (2014-08-13)
 
 
