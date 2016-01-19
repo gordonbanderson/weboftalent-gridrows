@@ -1,0 +1,6 @@
+---
+Name: weboftalent-grid-rows
+---
+Page_Controller:
+  extensions:
+    ['GridRowsExtension']
