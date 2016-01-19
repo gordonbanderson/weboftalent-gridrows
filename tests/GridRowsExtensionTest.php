@@ -16,6 +16,27 @@ class GridRowsExtensionTest extends FunctionalTest
     	parent::setUp();
     }
 
+
+    public function testSplitDataListMethodDoesNotExist()
+    {
+    	$message = 'Method not found.  A grid cannot be formed from the method'
+    			 . ' GridRowItemsTHISMETHODDOESNOTEXIST';
+    	$this->setExpectedException(\InvalidArgumentException::class, $message);
+
+    	$page = $this->objFromFixture('GridRowItemPageTO', 'page001');
+    	$page->doPublish();
+        $controller = new GridRowItemPageTO_Controller();
+        $controller->setDataModel($page);
+
+        for ($columns=1; $columns < 15; $columns++) {
+        	$grid = $controller->SplitDataListIntoGridRows(
+        		'GridRowItemsTHISMETHODDOESNOTEXIST', // method from model
+				$columns
+			);
+        	$this->checkGrid($grid, $columns, 10);
+        }
+    }
+
 	public function testSplitDataListFromModelIntoGridRows()
     {
     	$page = $this->objFromFixture('GridRowItemPageTO', 'page001');
