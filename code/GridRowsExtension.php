@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Helper methods to lay out DataObjects in a grid of rows and colums to a
+ * required size.  These methods are intended to be called from a template
+ */
 class GridRowsExtension extends DataExtension
 {
 	/*
@@ -13,7 +16,19 @@ class GridRowsExtension extends DataExtension
 	*/
 	public function SplitDataListIntoGridRows($itemsInGridMethod, $numberOfCols)
 	{
-		$itemsInGrid = $this->owner->$itemsInGridMethod();
+		$methodFound = false;
+
+		// Check first the controller and then the model for the method to call
+		if ($this->owner->hasMethod($itemsInGridMethod)) {
+			$itemsInGrid = $this->owner->$itemsInGridMethod();
+			$methodFound = true;
+		}
+
+		if (!$methodFound && $this->owner->model->hasMethod($itemsInGridMethod)) {
+			$itemsInGrid = $this->owner->model->$itemsInGridMethod();
+			$methodFound = true;
+		}
+
 		return $this->createGrid($itemsInGrid, $numberOfCols);
 	}
 
@@ -25,7 +40,8 @@ class GridRowsExtension extends DataExtension
 	See README.md for a worked example
 
 	*/
-	public function SplitClassNameDataListIntoGridRows($className, $numberOfCols, $limit, $sort = 'LastEdited DESC')
+	public function SplitClassNameDataListIntoGridRows(
+		$className, $numberOfCols, $limit, $sort = 'LastEdited DESC')
 	{
 		$clazz = Injector::inst()->create($className);
 		$itemsInGrid = $clazz->get()->limit($limit)->sort($sort);
