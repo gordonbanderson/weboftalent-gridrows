@@ -1,9 +1,9 @@
 #Functionality
-[![Build Status](https://travis-ci.org/gordonbanderson/weboftalent-gridrows.svg?branch=master)](https://travis-ci.org/gordonbanderson/weboftalent-gridrows)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/build-status/master)
-[![codecov.io](https://codecov.io/github/gordonbanderson/weboftalent-gridrows/coverage.svg?branch=master)](https://codecov.io/github/gordonbanderson/weboftalent-gridrows?branch=master)
+[![Build Status](https://travis-ci.org/gordonbanderson/weboftalent-gridrows.svg?branch=continuous_integration)](https://travis-ci.org/gordonbanderson/weboftalent-gridrows)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/quality-score.png?b=continuous_integration)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/?branch=continuous_integration)
+[![Code Coverage](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/coverage.png?b=continuous_integration)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/?branch=continuous_integration)
+[![Build Status](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/build.png?b=continuous_integration)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/build-status/continuous_integration)
+[![codecov.io](https://codecov.io/github/gordonbanderson/weboftalent-gridrows/coverage.svg?branch=continuous_integration)](https://codecov.io/github/gordonbanderson/weboftalent-gridrows?branch=continuous_integration)
 
 [![Latest Stable Version](https://poser.pugx.org/weboftalent/gridrows/version)](https://packagist.org/packages/weboftalent/gridrows)
 [![Latest Unstable Version](https://poser.pugx.org/weboftalent/gridrows/v/unstable)](//packagist.org/packages/weboftalent/gridrows)
@@ -15,7 +15,7 @@
 [![Dependency Status](https://www.versioneye.com/php/weboftalent:gridrows/badge.svg)](https://www.versioneye.com/php/weboftalent:gridrows)
 [![Reference Status](https://www.versioneye.com/php/weboftalent:gridrows/reference_badge.svg?style=flat)](https://www.versioneye.com/php/weboftalent:gridrows/references)
 
-![codecov.io](https://codecov.io/github/gordonbanderson/weboftalent-gridrows/branch.svg?branch=master)
+![codecov.io](https://codecov.io/github/gordonbanderson/weboftalent-gridrows/branch.svg?branch=continuous_integration)
 * Adds a convenience method for templates that pre-splits a dataset into rows
 
 # Installation
