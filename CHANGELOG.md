@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/gordonbanderson/weboftalent-gridrows/tree/HEAD)
-
-[Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/1.0.1...HEAD)
+## [1.0.2](https://github.com/gordonbanderson/weboftalent-gridrows/tree/1.0.2) (2016-01-19)
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/1.0.1...1.0.2)
 
 **Closed issues:**
 
