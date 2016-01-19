@@ -21,7 +21,7 @@ class GridRowsExtensionTest extends FunctionalTest
     {
     	$message = 'Method not found.  A grid cannot be formed from the method'
     			 . ' GridRowItemsTHISMETHODDOESNOTEXIST';
-    	$this->setExpectedException(\InvalidArgumentException::class, $message);
+    	$this->setExpectedException('InvalidArgumentException', $message);
 
     	$page = $this->objFromFixture('GridRowItemPageTO', 'page001');
     	$page->doPublish();
