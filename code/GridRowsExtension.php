@@ -18,6 +18,8 @@ class GridRowsExtension extends DataExtension
 	{
 		$methodFound = false;
 
+		$itemsInGrid = null;
+
 		// Check first the controller and then the model for the method to call
 		if ($this->owner->hasMethod($itemsInGridMethod)) {
 			$itemsInGrid = $this->owner->$itemsInGridMethod();
@@ -27,6 +29,12 @@ class GridRowsExtension extends DataExtension
 		if (!$methodFound && $this->owner->model->hasMethod($itemsInGridMethod)) {
 			$itemsInGrid = $this->owner->model->$itemsInGridMethod();
 			$methodFound = true;
+		}
+
+		if ($itemsInGrid == null) {
+			$message = 'Method not found.  A grid cannot be formed from the '
+					 . 'method ' . $itemsInGridMethod;
+			throw new InvalidArgumentException($message);
 		}
 
 		return $this->createGrid($itemsInGrid, $numberOfCols);
