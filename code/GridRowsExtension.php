@@ -17,7 +17,6 @@ class GridRowsExtension extends DataExtension
 	public function SplitDataListIntoGridRows($itemsInGridMethod, $numberOfCols)
 	{
 		$methodFound = false;
-
 		$itemsInGrid = null;
 
 		// Check first the controller and then the model for the method to call
@@ -26,7 +25,7 @@ class GridRowsExtension extends DataExtension
 			$methodFound = true;
 		}
 
-		if (!$methodFound && $this->owner->model->hasMethod($itemsInGridMethod)) {
+		if (!$methodFound && method_exists($this->owner->model, $itemsInGridMethod)) {
 			$itemsInGrid = $this->owner->model->$itemsInGridMethod();
 			$methodFound = true;
 		}
