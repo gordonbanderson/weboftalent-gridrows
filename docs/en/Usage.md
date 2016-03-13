@@ -12,7 +12,7 @@ $Content
 <% loop SplitDataListIntoGridRows('AllChildren',3) %>
 <div class="row">
 <% loop Columns %>
-<div class="span3"><h4><a href="$Link">$Title
+<div class="span3"><h4><a href="$Link">$Title</a>
 <a href="$Link"><% control Screenshot.SetWidth(300) %><img src="$URL" alt="$Title"/><% end_control %></a>
 </h4>
 </div><!-- end of span 4 -->
@@ -40,7 +40,7 @@ $Content
 <% loop SplitClassNameDataListIntoGridRows('Page',3, 12) %>
 <div class="row">
 <% loop Columns %>
-<div class="span3"><h4><a href="$Link">$Title
+<div class="span3"><h4><a href="$Link">$Title</a>
 <a href="$Link"><% control Screenshot.SetWidth(300) %><img src="$URL" alt="$Title"/><% end_control %></a>
 </h4>
 </div><!-- end of span 4 -->
