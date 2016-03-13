@@ -45,11 +45,11 @@ class GridRowsExtension extends DataExtension
 	bootstraps span classes it is useful to have the DataList split by row.
 	This is what this method does.
 
-	See README.md for a worked example
+	See USAGE.md for a worked example
 
 	*/
 	public function SplitClassNameDataListIntoGridRows(
-		$className, $numberOfCols, $limit, $sort = 'LastEdited DESC')
+		$className, $numberOfCols, $limit = 10, $sort = 'LastEdited DESC')
 	{
 		$clazz = Injector::inst()->create($className);
 		$itemsInGrid = $clazz->get()->limit($limit)->sort($sort);
