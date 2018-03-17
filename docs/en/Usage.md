@@ -34,17 +34,16 @@ The parameters are as follows:
 * $sort - the order in which to return them
 
 
-```
-<h1>$Title</h1>
-$Content
-<% loop SplitClassNameDataListIntoGridRows('Page',3, 12) %>
-<div class="row">
-<% loop Columns %>
-<div class="span3"><h4><a href="$Link">$Title</a>
-<a href="$Link"><% control Screenshot.SetWidth(300) %><img src="$URL" alt="$Title"/><% end_control %></a>
-</h4>
-</div><!-- end of span 4 -->
-<% end_loop %>
-</div><!-- end of row -->
-<% end_loop %>
+```php
+    <% loop $SplitClassNameDataListIntoGridRows('Page',3, 12) %>
+        <div class="row">
+            <% loop $Columns %>
+                <div class="span3"><h4><a href="$Link">$Title</a>
+                    <a href="$Link"><% loop $Screenshot.SetWidth(300) %><img src="$URL" alt="$Title"/><% end_loop %></a>
+                </h4>
+                </div><!-- end of span 4 -->
+            <% end_loop %>
+        </div><!-- end of row -->
+    <% end_loop %>
+
 ```
