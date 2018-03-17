@@ -1,5 +1,10 @@
 <?php
 
+use PageController;
+use SilverStripe\Dev\FunctionalTest;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\Dev\TestOnly;
+
 class GridRowsExtensionTest extends FunctionalTest
 {
     protected static $fixture_file = 'GridRowsExtensionTest.yml';
@@ -77,7 +82,7 @@ class GridRowsExtensionTest extends FunctionalTest
     {
         $page = $this->objFromFixture('GridRowItemPageTO', 'page001');
         $page->doPublish();
-        $controller = new Page_Controller();
+        $controller = new PageController();
         $controller->setDataModel($page);
         for ($columns=1; $columns < 15; $columns++) {
             for ($i=1; $i < 15; $i++) {
@@ -134,7 +139,7 @@ class GridRowItemPageTO extends Page implements TestOnly
     private static $has_many = array('GridRowItems' => 'GridRowItemTO');
 }
 
-class GridRowItemPageTO_Controller extends Page_Controller implements TestOnly
+class GridRowItemPageTO_Controller extends PageController implements TestOnly
 {
 
     /*

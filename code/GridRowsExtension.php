@@ -1,4 +1,8 @@
 <?php
+
+use SilverStripe\Core\Injector\Injector;
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\ORM\DataExtension;
 /**
  * Helper methods to lay out DataObjects in a grid of rows and colums to a
  * required size.  These methods are intended to be called from a template
