@@ -1,7 +1,7 @@
 {
 	"name": "weboftalent/gridrows",
 	"description": "SilverStripe module to facilitate easier templating of DataObjects laid out in a grid",
-	"type": "silverstripe-module",
+	"type": "silverstripe-vendormodule",
 	"keywords": [
 		"silverstripe",
 		"grid",
