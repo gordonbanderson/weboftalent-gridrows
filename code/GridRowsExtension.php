@@ -39,7 +39,7 @@ class GridRowsExtension extends DataExtension
         if ($itemsInGrid == null) {
             $message = 'Method not found.  A grid cannot be formed from the '
                      . 'method ' . $itemsInGridMethod;
-            throw new InvalidArgumentException($message);
+            throw new \InvalidArgumentException($message);
         }
 
         return $this->createGrid($itemsInGrid, $numberOfCols);
