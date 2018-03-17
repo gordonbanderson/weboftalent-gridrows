@@ -1,5 +1,17 @@
 # Change Log
 
+## [2.0.0](https://github.com/gordonbanderson/weboftalent-gridrows/tree/2.0.0) (2018-03-17)
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/1.0.5...2.0.0)
+
+## [1.0.5](https://github.com/gordonbanderson/weboftalent-gridrows/tree/1.0.5) (2018-03-17)
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/1.0.4...1.0.5)
+
+## [1.0.4](https://github.com/gordonbanderson/weboftalent-gridrows/tree/1.0.4) (2016-03-13)
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/1.0.3...1.0.4)
+
+## [1.0.3](https://github.com/gordonbanderson/weboftalent-gridrows/tree/1.0.3) (2016-03-13)
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/1.0.2...1.0.3)
+
 ## [1.0.2](https://github.com/gordonbanderson/weboftalent-gridrows/tree/1.0.2) (2016-01-19)
 [Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/1.0.1...1.0.2)
 

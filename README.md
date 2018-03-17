@@ -34,4 +34,4 @@ Short codes are also provided to render Google Street View and Google maps.
 * [Usage](./docs/en/Usage.md)
 
 ## Silverstripe Version Compatibility
-SilverStripe 3.1, 3.2
+SilverStripe 4, for SilverStripe 3.* use 1.x versions.
