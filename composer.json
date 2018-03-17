@@ -1,25 +1,31 @@
 {
-  "name": "weboftalent/gridrows",
-  "description": "SilverStripe module to facilitate easier templating of DataObjects laid out in a grid",
-  "type": "silverstripe-module",
-  "keywords": [
-    "silverstripe",
-    "grid",
-    "template"
-  ],
-  "authors": [
-    {
-      "name": "Gordon Anderson",
-      "email": "gordon.b.anderson@gmail.com",
-      "homepage": "https://github.com/gordonbanderson/weboftalent-gridrows",
-      "role": "Developer"
-    }
-  ],
-  "support": {
-    "issues": "https://github.com/gordonbanderson/weboftalent-gridrows/issues"
-  },
-  "require": {
-    "silverstripe/cms": "~3.1"
-  },
-  "license": "BSD-3-Clause"
+	"name": "weboftalent/gridrows",
+	"description": "SilverStripe module to facilitate easier templating of DataObjects laid out in a grid",
+	"type": "silverstripe-module",
+	"keywords": [
+		"silverstripe",
+		"grid",
+		"template"
+	],
+	"authors": [
+		{
+			"name": "Gordon Anderson",
+			"email": "gordon.b.anderson@gmail.com",
+			"homepage": "https://github.com/gordonbanderson/weboftalent-gridrows",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/gordonbanderson/weboftalent-gridrows/issues"
+	},
+	"require": {
+		"silverstripe/cms": "~4"
+	},
+	"autoload": {
+		"psr-4": {
+			"WebOfTalent\\GridRows\\": "code/",
+			"WebOfTalent\\GridRows\\Tests\\": "tests/"
+		}
+	},
+	"license": "BSD-3-Clause"
 }

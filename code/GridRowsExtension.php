@@ -1,5 +1,7 @@
 <?php
 
+namespace WebOfTalent\GridRows;
+
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DataExtension;

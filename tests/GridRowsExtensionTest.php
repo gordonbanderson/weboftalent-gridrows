@@ -1,5 +1,7 @@
 <?php
 
+namespace WebOfTalent\GridRows\Tests;
+
 use PageController;
 use SilverStripe\Dev\FunctionalTest;
 use SilverStripe\ORM\DataObject;
