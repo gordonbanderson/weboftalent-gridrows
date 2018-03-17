@@ -3,4 +3,4 @@ Name: weboftalent-grid-rows
 ---
 PageController:
   extensions:
-    - GridRowsExtension
+    - WebOfTalent\GridRows\GridRowsExtension
