@@ -1,4 +1,4 @@
-#Functionality
+#F unctionality
 [![Build Status](https://travis-ci.org/gordonbanderson/weboftalent-gridrows.svg?branch=master)](https://travis-ci.org/gordonbanderson/weboftalent-gridrows)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/?branch=master)
@@ -23,13 +23,12 @@
 * Gordon Anderson (Nickname: nontgor)
 	<gordon.b.anderson@gmail.com>
 
-##Introduction
+## Introduction
 
 This module provides mapping functionality for SilverStripe DataObjects in a
 manner that is simple as possible for both the programmer and content editor.
-Short codes are also provided to render Google Street View and Google maps.
  
-##Documentation
+## Documentation
 * [Installation](./docs/en/Installation.md)
 * [Usage](./docs/en/Usage.md)
 
