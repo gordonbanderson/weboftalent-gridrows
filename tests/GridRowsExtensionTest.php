@@ -136,8 +136,10 @@ class GridRowItemTO extends DataObject implements TestOnly
     private static $has_one = array('GridRowItemPage' => 'GridRowItemPageTO');
 }
 
-class GridRowItemPageTO extends Page implements TestOnly
+class GridRowItemPageTO extends \Page implements TestOnly
 {
+    private static $tablename = 'GridRowItemPageTO';
+    
     private static $has_many = array('GridRowItems' => 'GridRowItemTO');
 }
 
