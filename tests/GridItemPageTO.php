@@ -14,6 +14,6 @@ use SilverStripe\ORM\DataObject;
 
 class GridRowItemPageTO extends \Page implements TestOnly
 {
-    private static $tablename = 'GridRowItemPageTO';
+    private static $table_name = 'GridRowItemPageTO';
     private static $has_many = ['GridRowItems' => 'GridRowItemTO'];
 }
