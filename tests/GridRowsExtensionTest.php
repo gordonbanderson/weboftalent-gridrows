@@ -4,8 +4,6 @@ namespace WebOfTalent\GridRows\Tests;
 
 use PageController;
 use SilverStripe\Dev\FunctionalTest;
-use SilverStripe\ORM\DataObject;
-use SilverStripe\Dev\TestOnly;
 
 class GridRowsExtensionTest extends FunctionalTest
 {
@@ -33,7 +31,7 @@ class GridRowsExtensionTest extends FunctionalTest
 
         $page = $this->objFromFixture('GridRowItemPageTO', 'page001');
         $page->doPublish();
-        $controller = new GridRowItemPageTO_Controller();
+        $controller = new GridRowItemPageTOController();
         $controller->setDataModel($page);
 
         for ($columns=1; $columns < 15; $columns++) {
@@ -49,7 +47,7 @@ class GridRowsExtensionTest extends FunctionalTest
     {
         $page = $this->objFromFixture('GridRowItemPageTO', 'page001');
         $page->doPublish();
-        $controller = new GridRowItemPageTO_Controller();
+        $controller = new GridRowItemPageTOController();
         $controller->setDataModel($page);
 
         for ($columns=1; $columns < 15; $columns++) {
@@ -65,7 +63,7 @@ class GridRowsExtensionTest extends FunctionalTest
     {
         $page = $this->objFromFixture('GridRowItemPageTO', 'page001');
         $page->doPublish();
-        $controller = new GridRowItemPageTO_Controller();
+        $controller = new GridRowItemPageTOController();
         $controller->setDataModel($page);
         for ($columns=1; $columns < 15; $columns++) {
             $grid = $controller->SplitDataListIntoGridRows(
@@ -129,28 +127,3 @@ class GridRowsExtensionTest extends FunctionalTest
 }
 
 
-class GridRowItemTO extends DataObject implements TestOnly
-{
-    private static $db = array('Name' => 'Varchar');
-
-    private static $has_one = array('GridRowItemPage' => 'GridRowItemPageTO');
-}
-
-class GridRowItemPageTO extends \Page implements TestOnly
-{
-    private static $tablename = 'GridRowItemPageTO';
-
-    private static $has_many = array('GridRowItems' => 'GridRowItemTO');
-}
-
-class GridRowItemPageTO_Controller extends PageController implements TestOnly
-{
-
-    /*
-    This is a test method on the *controller*
-     */
-    public function GridItems()
-    {
-        return $this->model->GridRowItems();
-    }
-}
