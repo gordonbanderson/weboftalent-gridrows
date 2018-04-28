@@ -32,7 +32,6 @@
 			"WebOfTalent\\GridRows\\Tests\\": "tests/"
 		}
 	},
-	,
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"license": "BSD-3-Clause"
