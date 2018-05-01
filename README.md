@@ -1,4 +1,4 @@
-#F unctionality
+# Functionality
 [![Build Status](https://travis-ci.org/gordonbanderson/weboftalent-gridrows.svg?branch=master)](https://travis-ci.org/gordonbanderson/weboftalent-gridrows)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-gridrows/?branch=master)
