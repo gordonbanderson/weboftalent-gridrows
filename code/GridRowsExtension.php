@@ -19,6 +19,8 @@ class GridRowsExtension extends DataExtension
 
     See README.md for a worked example
 
+    Note, this method should have been called SplitDataListMethodIntoGridRows
+
     */
     public function SplitDataListIntoGridRows($itemsInGridMethod, $numberOfCols)
     {
@@ -42,7 +44,7 @@ class GridRowsExtension extends DataExtension
             throw new \InvalidArgumentException($message);
         }
 
-        return $this->createGrid($itemsInGrid, $numberOfCols);
+        return $this->createGridLayout($itemsInGrid, $numberOfCols);
     }
 
     /*
@@ -61,14 +63,14 @@ class GridRowsExtension extends DataExtension
     ) {
         $clazz = Injector::inst()->create($className);
         $itemsInGrid = $clazz->get()->limit($limit)->sort($sort);
-        return $this->createGrid($itemsInGrid, $numberOfCols);
+        return $this->createGridLayout($itemsInGrid, $numberOfCols);
     }
 
     /*
     The actual method that splits the DataList into an ArrayList of rows that
     contain an ArrayList of Columns
     */
-    private function createGrid($itemsInGrid, $numberOfCols)
+    public function createGridLayout($itemsInGrid, $numberOfCols)
     {
         $position = 1;
         $columns = new ArrayList();
