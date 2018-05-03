@@ -1,5 +1,8 @@
 # Change Log
 
+## [2.0.4](https://github.com/gordonbanderson/weboftalent-gridrows/tree/2.0.4) (2018-05-03)
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/2.0.3...2.0.4)
+
 ## [2.0.3](https://github.com/gordonbanderson/weboftalent-gridrows/tree/2.0.3) (2018-04-28)
 [Full Changelog](https://github.com/gordonbanderson/weboftalent-gridrows/compare/2.0.2...2.0.3)
 
